@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="../bootstrap/bootstrap.css">
+<script src="../bootstrap/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2 class="mb-4">Password Generator</h2>
+
+  <div class="mb-3"> 
+    <input class="form-check-input" type="checkbox" id="symbolsCheckbox" checked> 
+    <label class="form-check-label" for="symbolsCheckbox">Symbols</label>
+    <input class="form-check-input ms-3" type="checkbox" id="alphabetCheckbox" checked> 
+    <label class="form-check-label" for="alphabetCheckbox">Alphabet</label>
+    <input class="form-check-input ms-3" type="checkbox" id="numbersCheckbox" checked> 
+    <label class="form-check-label" for="numbersCheckbox">Numbers</label>
+  </div>
+
+  <div class="mb-3">
+    <input type="range" class="form-range" id="passwordLengthRange" min="6" max="10" value="6"> 
+    <label for="passwordLengthRange" class="form-label">Password Length: <span id="passwordLengthValue">6</span></label>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="showPasswordCheckbox">
+    <label class="form-check-label" for="showPasswordCheckbox">Show Password</label>
+  </div>
+
+  <button class="btn btn-primary mb-3" onclick="generatePassword()">Generate Password</button>
+  <input type="text" id="password" class="form-control" readonly>
+
+  <p id="passwordStrength"></p>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
